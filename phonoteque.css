@@ -20,20 +20,25 @@ header{
 
 .logo{
     margin-left: 12%;
-   
 }
 
 .logo a{
     text-decoration: none;
-    color: rgb(26, 181, 219);
+    color: white;
     padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 4px;
+    background-color: rgb(58, 57, 57);
+    box-shadow: 1px 1px 5px lightgray;
+    font-size: 1.3em;  
+}
+
+.logo a span{
+    color: rgb(187, 41, 41);
+    margin-bottom: 5px;
 }
 
 .logo :hover{
-    color: white;
-    background-color: rgb(26, 181, 219);
-    border-radius: 20px;
+    background-color: rgb(12, 12, 12);
     transition: 0.9s;
 }
 
@@ -49,20 +54,37 @@ header{
     margin-left: 25px;
 }
 
+.header-bg{
+    background: linear-gradient(to right, rgb(61, 60, 60), black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    background-position: center;
+    font-size: 2em;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    text-shadow: 0 0 20px black  ;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
 .header-salsa a{
-    color: salmon;
+    color: rgb(133, 33, 33);
     padding: 5px 10px;
     border-radius: 20px;
 }
 
 .header-salsa :hover{
     color:white;
-    background-color: salmon;
+    background-color: rgb(133, 33, 33);
     border-radius: 20px;
     transition: 0.9s;
 }
 
-.header-soul a {
+.header-soul a{
     color: rgb(51, 50, 50);
     padding: 5px 10px;
     border-radius: 20px;
@@ -75,23 +97,6 @@ header{
     transition: 0.9s;
 }
 
-.header-bg{
-    background: linear-gradient(to right, rgb(61, 60, 60), black);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 75px;
-    background-position: center;
-    font-size: 2.5em;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: rgb(238, 231, 231);
-    text-shadow: 0 0 20px black  ;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-}
-
 .header-bg-soul{
     background-color: black;
     display: flex;
@@ -99,9 +104,13 @@ header{
     justify-content: center;
     height: 100px;
     background-position: center;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: 'Roboto Condensed', sans-serif;
-    color: rgb(238, 231, 231);
+    color: white;
+}
+
+.header-bg-soul h3{
+    color: white;
 }
 
 .header-bg-salsa {
@@ -115,9 +124,23 @@ header{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.header-bg h3,.header-bg-salsa h3, .header-bg-soul h3{
+    animation: header-bg 2s;
+}
+
+@keyframes header-bg{
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
 .header-bg-salsa h3 {
     color: white;
 }
+
 .soul-acc h1, .salsa-acc h1{
     text-align: center;   
     padding: 20px 0 40px 0; 
@@ -128,7 +151,6 @@ header{
     text-decoration: none;
     margin-top: 0%;
 }
-
 
 .soul-acc h1 a{
     color: white;
@@ -168,6 +190,19 @@ header{
 .carte-soul-acc{
     background-color: white;
     box-shadow: 3px 3px 4px rgb(54, 54, 54);
+    animation: carte-soul 7s;
+}
+
+@keyframes carte-soul{
+    from{
+        transform: translateX(-1500px);
+    }
+    40%{
+        transform: translateX(-1500px);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
 
 .carte-soul-acc img, .carte-acc img{
@@ -193,7 +228,6 @@ header{
     align-items: center;
     flex-direction: column;
     width: 100%;
-   
 }
 
 .globale-salsa, .globale-soul{
@@ -222,10 +256,19 @@ header{
     margin: 80px;
     background-color: white; 
     box-shadow: 0 0 10px rgb(139, 131, 131);
+    animation: album 3s;
+ }
+
+ @keyframes album{
+     from{
+         transform: translateY(800px);
+     }
+     to{
+         transform: translateY(0);
+     }
  }
 
 .soul-artiste, .salsa-artiste{
-    
     text-align: center;
     padding: 15px;
     
@@ -258,12 +301,12 @@ header{
     background: linear-gradient(50deg,white 0%, rgb(46, 45, 116), rgb(133, 33, 33) 100%);
 }
 
-#salsapresentation h1 {
+#salsapresentation h1{
     text-align: center;
     color: brown;
 }
 
-#salsapresentation p {
+#salsapresentation p{
     text-align: justify;
     margin: 0 85px 0 85px;
     color: antiquewhite; 
@@ -298,22 +341,30 @@ footer{
 
 .footer-logo a{
     text-decoration: none;
-    color: rgb(26, 181, 219);
-    font-size: 2.3em;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgb(58, 57, 57);
+    box-shadow: 1px 1px 5px lightgray;
+    font-size: 1.3em;    
 }
 
-.footer-logo p{
-    font-size: 1.2em;
-    color: rgb(49, 47, 47);
-    margin-top: 0;
-    margin-bottom: 20px;
+.footer-logo span{
+    color: rgb(187, 41, 41);
+    margin-bottom: 5px;
+}
+
+.footer-logo :hover{
+    background-color: rgb(12, 12, 12);
+    transition: 0.9s;
 }
 
 .footer-style{
     display: flex;
     justify-content: space-between;
     width: 60%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: -5px;
 }
 
 .footer-style a{
@@ -325,22 +376,24 @@ footer{
 .footer-salsa{
     width: 150px;
     text-align: center;
+    margin-top: -20px;
 }
 
 .footer-salsa a{
-    color: salmon;
+    color: rgb(133, 33, 33);
     padding: 5px 10px;
     border-radius: 20px;
 }
  .footer-salsa :hover{
     color:white;
-    background-color: salmon;
+    background-color: rgb(133, 33, 33);
     border-radius: 20px;
     transition: 0.9s;
  }
 .footer-soul{
     width: 150px;
     text-align: center;
+    margin-top: -20px;
 }
 
 .footer-soul a{
@@ -359,13 +412,16 @@ footer{
 .footer-social{
     display: flex;
     justify-content: space-between;
-    width: 250px;
-
-    margin-top: -10px;
+    width: 350px;
+    margin-top: -50px;
 }
 .footer-social img{
     height: 90px;
-    margin: 5px 3px;
+    padding: 0 8px 0px 8px;
+}
+
+.footer-social :hover{
+    transform: scale(1.05);
 }
 
 .salsa-artiste p {
@@ -374,6 +430,19 @@ footer{
 
 .carte-acc {
     background-color: rgb(133, 33, 33);
+    animation: carte-acc 5s;
+}
+
+@keyframes carte-acc{
+    from{
+        transform: translateX(-1500px);
+    }
+    30%{
+        transform: translateX(-1500px);
+    }
+    to{
+        transform: translateX(0)
+    }
 }
 
 .salsa-acc {

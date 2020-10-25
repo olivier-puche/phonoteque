@@ -1,15 +1,15 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
 }
 
-.toolbar{
+.toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,43 +18,43 @@ header{
     background-color: rgb(240, 240, 240);
 }
 
-.logo{
+.logo {
     margin-left: 12%;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
     background-color: rgb(58, 57, 57);
     box-shadow: 1px 1px 5px lightgray;
-    font-size: 1.3em;  
+    font-size: 1.3em;
 }
 
-.logo a span{
+.logo a span {
     color: rgb(187, 41, 41);
     margin-bottom: 5px;
 }
 
-.logo :hover{
+.logo :hover {
     background-color: rgb(12, 12, 12);
     transition: 0.9s;
 }
 
-.liens{
+.liens {
     margin-right: 12%;
     display: flex;
 }
 
-.liens a{
+.liens a {
     text-decoration: none;
     padding: 10px;
     color: rgb(26, 181, 219);
     margin-left: 25px;
 }
 
-.header-bg{
+.header-bg {
     background: linear-gradient(to right, rgb(61, 60, 60), black);
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,38 +66,68 @@ header{
     font-size: 2em;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    text-shadow: 0 0 20px black  ;
+    text-shadow: 0 0 20px black;
     margin-bottom: 0%;
     padding-bottom: 0%;
 }
 
-.header-salsa a{
+.header-bg h3,
+.header-bg-salsa h3,
+.header-bg-soul h3 {
+    animation: header-bg 2s;
+}
+
+@keyframes header-bg {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.header-salsa a {
     color: rgb(133, 33, 33);
     padding: 5px 10px;
     border-radius: 20px;
 }
 
-.header-salsa :hover{
-    color:white;
+.header-salsa :hover {
+    color: white;
     background-color: rgb(133, 33, 33);
     border-radius: 20px;
     transition: 0.9s;
 }
 
-.header-soul a{
+.header-bg-salsa {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-position: center;
+    font-size: 2em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header-bg-salsa h3 {
+    color: white;
+}
+
+.header-soul a {
     color: rgb(51, 50, 50);
     padding: 5px 10px;
     border-radius: 20px;
 }
 
-.header-soul :hover{
+.header-soul :hover {
     color: white;
     background-color: rgb(51, 50, 50);
     border-radius: 20px;
     transition: 0.9s;
 }
 
-.header-bg-soul{
+.header-bg-soul {
     background-color: black;
     display: flex;
     align-items: center;
@@ -109,323 +139,87 @@ header{
     color: white;
 }
 
-.header-bg-soul h3{
+.header-bg-soul h3 {
     color: white;
 }
 
-.header-bg-salsa {
-    background:black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    background-position: center;
-    font-size: 2em;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.header-bg h3,.header-bg-salsa h3, .header-bg-soul h3{
-    animation: header-bg 2s;
-}
-
-@keyframes header-bg{
-    from{
-        transform: translateX(-1000px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-
-.header-bg-salsa h3 {
-    color: white;
-}
-
-.soul-acc h1, .salsa-acc h1{
-    text-align: center;   
-    padding: 20px 0 40px 0; 
+.soul-acc h1,
+.salsa-acc h1 {
+    text-align: center;
+    padding: 20px 0 40px 0;
     font-size: 2.5em;
 }
 
-.soul-acc a, .salsa-acc a{
+.soul-acc a,
+.salsa-acc a {
     text-decoration: none;
     margin-top: 0%;
 }
 
-.soul-acc h1 a{
+.salsa-acc h1 a {
     color: white;
     padding: 1px 8px;
 }
 
-.soul-acc h1 :hover{
+.salsa-acc h1 :hover {
+    color: rgb(133, 33, 33);
+    background-color: white;
+    padding: 1px 8px;
+    transition: 0.9s;
+}
+
+.salsa-acc {
+    background: rgb(180, 175, 175);
+}
+
+.soul-acc h1 a {
+    color: white;
+    padding: 1px 8px;
+}
+
+.soul-acc h1 :hover {
     color: black;
     background-color: white;
     padding: 1px 8px;
     transition: 0.9s;
 }
 
-.soul-acc{
+.soul-acc {
     background-image: url(img/bg-soul.jpg);
     padding-top: 10px;
 }
 
-.artistes-soul-acc, .artistes-acc{
+.artistes-soul-acc,
+.artistes-acc {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.carte-soul-acc, .carte-acc{  
-    text-align: center;
-    width: 255px;
-    margin-bottom: 70px;
-}
-
-.carte-soul-acc audio, .carte-acc audio{
-    width: 230px;
-    height: 30px;
-    margin-bottom: 10px;
-}
-
-.carte-soul-acc{
-    background-color: white;
-    box-shadow: 3px 3px 4px rgb(54, 54, 54);
-    animation: carte-soul 7s;
-}
-
-@keyframes carte-soul{
-    from{
-        transform: translateX(-1500px);
-    }
-    40%{
-        transform: translateX(-1500px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-
-.carte-soul-acc img, .carte-acc img{
+.carte-soul-acc img,
+.carte-acc img {
     width: 250px;
     height: 300px;
     padding: 13px 13px 0 13px;
 }
 
-.carte-soul-acc h2, .carte-acc h2{
+.carte-soul-acc h2,
+.carte-acc h2 {
     margin-bottom: 10px;
 }
 
-#soul-presentation p{
-    color: white;
+.carte-soul-acc,
+.carte-acc {
     text-align: center;
-    font-size: 1.1em;
-    padding: 30px 8%;
+    width: 255px;
+    margin-bottom: 70px;
 }
 
-#soul, #salsa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.globale-salsa, .globale-soul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;  
-}
-
-#soul{
-    background-image: url(img/bg-soul.jpg);
-}
-
-#soul h1{
-    color: white;
-    text-align: center;
-}
-
-.album-soul, .album-salsa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 1000px;  
-    margin: 80px;
-    background-color: white; 
-    box-shadow: 0 0 10px rgb(139, 131, 131);
-    animation: album 3s;
- }
-
- @keyframes album{
-     from{
-         transform: translateY(800px);
-     }
-     to{
-         transform: translateY(0);
-     }
- }
-
-.soul-artiste, .salsa-artiste{
-    text-align: center;
-    padding: 15px;
-    
-}
-
-.soul-artiste p, .salsa-artiste p{
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: rgb(80, 77, 77);
-}
-
-.soul-artiste h2, .salsa-artiste h2{
-    font-size: 1.9em;
-    margin-bottom: 15px;
-    line-height: 0.5em;
-}
-
-.soul-artiste img, .salsa-artiste img{
-    height: 60px;
-}
-
-
-.soul-jacket img, .salsa-jacket img{
-    width: 500px;
-    padding: 10px;
-    
-}
-
-#salsa{
-    background: linear-gradient(50deg,white 0%, rgb(46, 45, 116), rgb(133, 33, 33) 100%);
-}
-
-#salsapresentation h1{
-    text-align: center;
-    color: brown;
-}
-
-#salsapresentation p{
-    text-align: justify;
-    margin: 0 85px 0 85px;
-    color: antiquewhite; 
-}
-
-.salsa-acc h1 a{
-    color: white;
-    padding: 1px 8px;
-}
-
-.salsa-acc h1 :hover{
-    color: rgb(133, 33, 33);
-    background-color: white ;
-    padding: 1px 8px;
-    transition: 0.9s;
-}
-    
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(240, 240, 240);
-}
-
-.footer-logo{
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1em;
-    
-}
-
-.footer-logo a{
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    background-color: rgb(58, 57, 57);
-    box-shadow: 1px 1px 5px lightgray;
-    font-size: 1.3em;    
-}
-
-.footer-logo span{
-    color: rgb(187, 41, 41);
-    margin-bottom: 5px;
-}
-
-.footer-logo :hover{
-    background-color: rgb(12, 12, 12);
-    transition: 0.9s;
-}
-
-.footer-style{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin-bottom: 40px;
-    margin-top: -5px;
-}
-
-.footer-style a{
-    text-decoration: none;
-    font-size: 1.5em;
-    
-}
-
-.footer-salsa{
-    width: 150px;
-    text-align: center;
-    margin-top: -20px;
-}
-
-.footer-salsa a{
-    color: rgb(133, 33, 33);
-    padding: 5px 10px;
-    border-radius: 20px;
-}
- .footer-salsa :hover{
-    color:white;
-    background-color: rgb(133, 33, 33);
-    border-radius: 20px;
-    transition: 0.9s;
- }
-.footer-soul{
-    width: 150px;
-    text-align: center;
-    margin-top: -20px;
-}
-
-.footer-soul a{
-    color: rgb(51, 50, 50);
-    padding: 5px 10px;
-    border-radius: 20px;
-}
-
-.footer-soul :hover{
-    color: white;
-    background-color: rgb(51, 50, 50);
-    border-radius: 20px;
-    transition: 0.9s;
-}
-
-.footer-social{
-    display: flex;
-    justify-content: space-between;
-    width: 350px;
-    margin-top: -50px;
-}
-.footer-social img{
-    height: 90px;
-    padding: 0 8px 0px 8px;
-}
-
-.footer-social :hover{
-    transform: scale(1.05);
-}
-
-.salsa-artiste p {
-    text-align: justify!important;
+.carte-soul-acc audio,
+.carte-acc audio {
+    width: 230px;
+    height: 30px;
+    margin-bottom: 10px;
 }
 
 .carte-acc {
@@ -433,18 +227,239 @@ footer{
     animation: carte-acc 5s;
 }
 
-@keyframes carte-acc{
-    from{
+@keyframes carte-acc {
+    from {
         transform: translateX(-1500px);
     }
-    30%{
+    30% {
         transform: translateX(-1500px);
     }
-    to{
+    to {
         transform: translateX(0)
     }
 }
 
-.salsa-acc {
-    background: rgb(180, 175, 175);
+.carte-soul-acc {
+    background-color: white;
+    box-shadow: 3px 3px 4px rgb(54, 54, 54);
+    animation: carte-soul 7s;
+}
+
+@keyframes carte-soul {
+    from {
+        transform: translateX(-1500px);
+    }
+    40% {
+        transform: translateX(-1500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#soul,
+#salsa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.globale-salsa,
+.globale-soul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.album-soul,
+.album-salsa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 1000px;
+    margin: 80px;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(139, 131, 131);
+    animation: album 3s;
+}
+
+@keyframes album {
+    from {
+        transform: translateY(800px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.soul-artiste,
+.salsa-artiste {
+    text-align: center;
+    padding: 15px;
+}
+
+.soul-artiste p,
+.salsa-artiste p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: rgb(80, 77, 77);
+}
+
+.soul-artiste h2,
+.salsa-artiste h2 {
+    font-size: 1.9em;
+    margin-bottom: 15px;
+    line-height: 0.5em;
+}
+
+.soul-artiste img,
+.salsa-artiste img {
+    height: 60px;
+}
+
+.soul-jacket img,
+.salsa-jacket img {
+    width: 500px;
+    padding: 10px;
+}
+
+#salsa {
+    background: linear-gradient(50deg, white 0%, rgb(46, 45, 116), rgb(133, 33, 33) 100%);
+}
+
+#salsapresentation h1 {
+    text-align: center;
+    color: brown;
+}
+
+.salsa-artiste p {
+    text-align: justify!important;
+}
+
+#salsapresentation p {
+    text-align: justify;
+    margin: 0 85px 0 85px;
+    color: antiquewhite;
+}
+
+#soul {
+    background-image: url(img/bg-soul.jpg);
+}
+
+#soul h1 {
+    color: white;
+    text-align: center;
+}
+
+#soul-presentation p {
+    color: white;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 30px 8%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1em;
+}
+
+.footer-logo a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgb(58, 57, 57);
+    box-shadow: 1px 1px 5px lightgray;
+    font-size: 1.3em;
+}
+
+.footer-logo span {
+    color: rgb(187, 41, 41);
+    margin-bottom: 5px;
+}
+
+.footer-logo :hover {
+    background-color: rgb(12, 12, 12);
+    transition: 0.9s;
+}
+
+.footer-style {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 40px;
+    margin-top: -5px;
+}
+
+.footer-style a {
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.footer-salsa {
+    width: 150px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.footer-salsa a {
+    color: rgb(133, 33, 33);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.footer-salsa :hover {
+    color: white;
+    background-color: rgb(133, 33, 33);
+    border-radius: 20px;
+    transition: 0.9s;
+}
+
+.footer-soul {
+    width: 150px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.footer-soul a {
+    color: rgb(51, 50, 50);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.footer-soul :hover {
+    color: white;
+    background-color: rgb(51, 50, 50);
+    border-radius: 20px;
+    transition: 0.9s;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-top: -50px;
+}
+
+.footer-social img {
+    height: 90px;
+    padding: 0 8px 0px 8px;
+}
+
+.footer-social :hover {
+    transform: scale(1.05);
 }
